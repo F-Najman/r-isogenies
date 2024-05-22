@@ -37,13 +37,13 @@ for p in [3,5,7,11,13] do
 				if OrdDet eq (p-1) and not IsIrreducible(sbgHSL2) then				// If |det(H)|=|F_p*| and (H cap SL_2(F_p)) acts reducibly,
 					"p =", p, "index =", #GL(2,p)/#sbgH, "H =", sbgH;			// print H and its index inside GL_2(F_p)
 					if p eq 7 and #GL(2,p)/#sbgH eq 56 then
-						IsConjugate(G7, sbgH, Candidate7);
+						assert IsConjugate(G7, sbgH, Candidate7);
 					end if;
 					if p eq 7 and #GL(2,p)/#sbgH eq 112 then
-						IsConjugate(G7, sbgH, Candidate7_2);
+						assert IsConjugate(G7, sbgH, Candidate7_2);
 					end if;
 					if p eq 5 and #GL(2,p)/#sbgH eq 30 then
-						IsConjugate(G5, sbgH, Candidate5);
+						assert IsConjugate(G5, sbgH, Candidate5);
 					end if;
 				end if;
 			end if;
